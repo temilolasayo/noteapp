@@ -15,14 +15,14 @@ const AddTask = (props) => {
     });
   };
 
-  const addDetails = (todo) => {
-    let today = new Date().toISOString().substr(0, 10);
-    document.querySelector("#today").value = today;
-    todo.id = todos.length + 1;
-    todo.date = today;
-    console.log(todo.date);
-    setTodos([...todos, todo]);
-  };
+  // const addDetails = (todo) => {
+  //   let today = new Date().toISOString().substr(0, 10);
+  //   document.querySelector("#today").value = today;
+  //   todo.id = todos.length + 1;
+  //   todo.date = today;
+  //   console.log(todo.date);
+  //   setTodos([...todos, todo]);
+  // };
 
   return (
     <div>
