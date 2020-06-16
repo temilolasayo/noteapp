@@ -45,17 +45,16 @@ const TodoDetails = (props) => (
             </tbody>
           ))
         ) : (
-          <p>
+          <tbody>
             <tr>
-              <th>
-                <div className="col-sm-12 text-danger">
-                  <h2 text-center>
-                    <b>You dont have any todo pending!</b>
-                  </h2>
-                </div>
-              </th>
+              <td></td>
+              <td>
+                <p className="text-center text-danger">
+                  <b>You dont have any task!!!</b>
+                </p>
+              </td>
             </tr>
-          </p>
+          </tbody>
         )}
       </table>
     </div>
