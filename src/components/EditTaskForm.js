@@ -18,28 +18,28 @@ const EditTaskForm = (props) => {
           props.updateTask(todo.id, todo);
         }}
       >
-        <div class="form-group row">
-          <label for="title" class="col-sm-2 col-form-label">
+        <div className="form-group row">
+          <label htmlFor="title" className="col-sm-2 col-form-label">
             Title
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
               name="title"
               value={todo.title}
               onChange={onChangeInput}
-              class="form-control"
+              className="form-control"
               id="title"
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="title" class="col-sm-2 col-form-label">
+        <div className="form-group row">
+          <label htmlFor="title" className="col-sm-2 col-form-label">
             Note
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <textarea
-              class="form-control"
+              className="form-control"
               id="details"
               name="details"
               value={todo.details}
@@ -53,7 +53,7 @@ const EditTaskForm = (props) => {
         </button>
         <span> </span>
         <button
-          onClick={() => props.setEditing(false)}
+          onClick={() => props.SetEditTask(false)}
           className="btn btn-primary"
           type="submit"
         >

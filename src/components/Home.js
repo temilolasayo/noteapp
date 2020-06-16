@@ -47,6 +47,7 @@ function Home() {
 
   return (
     <div className="container">
+      <br />
       <h1>My Note App</h1>
       <div className="flex-row">
         <div className="flex-large">

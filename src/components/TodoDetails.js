@@ -1,39 +1,31 @@
 import React from "react";
-import "./css/styles.css";
+// import "./css/styles.css";
 
 const TodoDetails = (props) => (
-  <div class="container">
-    <div class="table-wrapper">
-      <div class="table-title">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>
-              <b>Todo List</b>
-            </h2>
-          </div>
+  <div className="container">
+    <div className="table-wrapper">
+      <div className="table-title">
+        <div className="row">
+          <br></br>
         </div>
       </div>
-      <table class="table table-striped table-hover">
-        <thead class="table-title">
+
+      <table className="table">
+        <thead className="thead-dark">
           <tr>
-            <th>
-              <h2>Title(s)</h2>
-            </th>
-            <th>
-              <h2>Note(s)</h2>
-            </th>
-            <th>
-              <h2>Actions</h2>
-            </th>
+            <th scope="col">Title(s)</th>
+            <th scope="col">Note(s)</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          {props.todos.length > 0 ? (
-            props.todos.map((todo) => (
-              <tr key={todo.id}>
-                <td>{todo.title}</td>
-                <td>{todo.details}</td>
 
+        {props.todos.length > 0 ? (
+          props.todos.map((todo) => (
+            <tbody key={todo.id}>
+              <tr>
+                <th scope="row">{todo.title}</th>
+                {/* <td>Mark</td> */}
+                <td>{todo.details}</td>
                 <td>
                   <button
                     onClick={() => props.editSingleTask(todo)}
@@ -50,22 +42,21 @@ const TodoDetails = (props) => (
                   </button>
                 </td>
               </tr>
-            ))
-          ) : (
-            <p>
-              <tr>
-                <th>
-                  {" "}
-                  <div class="col-sm-12 text-danger">
-                    <h2 text-center>
-                      <b>You dont have any todo pending!</b>
-                    </h2>
-                  </div>
-                </th>
-              </tr>
-            </p>
-          )}
-        </tbody>
+            </tbody>
+          ))
+        ) : (
+          <p>
+            <tr>
+              <th>
+                <div className="col-sm-12 text-danger">
+                  <h2 text-center>
+                    <b>You dont have any todo pending!</b>
+                  </h2>
+                </div>
+              </th>
+            </tr>
+          </p>
+        )}
       </table>
     </div>
   </div>
